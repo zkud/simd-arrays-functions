@@ -40,7 +40,11 @@ pub fn add(ctx: CallContext) -> Result<JsUndefined> {
 }
 
 #[inline]
-fn add_with_cpu<T: Add + Copy>(first_array: &[T], second_array: &[T], result_array: &mut [T::Output]) {
+fn add_with_cpu<T: Add + Copy>(
+  first_array: &[T],
+  second_array: &[T],
+  result_array: &mut [T::Output],
+) {
   for index in 0..result_array.len() {
     result_array[index] = first_array[index] + second_array[index];
   }
