@@ -1,12 +1,8 @@
 # `@zkud/simd-arrays-functions`
 
-![https://github.com/zkud/simd-arrays-functions/actions](https://github.com/napi-rs/simd-arrays-functions/workflows/CI/badge.svg)
+[![CI](https://github.com/zkud/simd-arrays-functions/actions/workflows/CI.yaml/badge.svg)](https://github.com/zkud/simd-arrays-functions/actions/workflows/CI.yaml)
 
-## Install this test package
-
-```
-yarn add @zkud/simd-arrays-functions
-```
+npm package for Node.js-like envs with simd functions for typed arrays implemented with Rust and Vulcano.
 
 ## Support matrix
 
@@ -27,69 +23,47 @@ yarn add @zkud/simd-arrays-functions
 | Android arm64    | ✓      | ✓      | ✓      |
 | FreeBSD x64      | ✓      | ✓      | ✓      |
 
-## Ability
+### Languages
 
-### Build
+Both TypeScript and JavaScript are supported.
 
-After `yarn build/npm run build` command, you can see `simd-arrays-functions.[darwin|win32|linux].node` file in project root. This is the native addon built from [lib.rs](./src/lib.rs).
+## Installing @zkud/simd-arrays-functions
 
-### Test
+Installing SIMD requires a [supported version of Node and Rust](https://github.com/neon-bindings/neon#platform-support) and [vulkan API installed](https://www.vulkan.org/).
 
-With [ava](https://github.com/avajs/ava), run `yarn test/npm run test` to testing native addon. You can also switch to another testing framework if you want.
+You can install the project with npm. In the project directory, run:
 
-### CI
-
-With github actions, every commits and pull request will be built and tested automatically in [`node@12`, `node@14`, `@node16`] x [`macOS`, `Linux`, `Windows`] matrix. You will never be afraid of the native addon broken in these platforms.
-
-### Release
-
-Release native package is very difficult in old days. Native packages may ask developers who use its to install `build toolchain` like `gcc/llvm` , `node-gyp` or something more.
-
-With `Github actions`, we can easily prebuild `binary` for major platforms. And with `N-API`, we should never afraid of **ABI Compatible**.
-
-The other problem is how to deliver prebuild `binary` to users. Download it in `postinstall` script is a common way which most packages do it right now. The problem of this solution is it introduced many other packages to download binary which has not been used by `runtime codes`. The other problem is some user may not easily download the binary from `github/CDN` if they are behind private network (But in most case, they have a private NPM mirror).
-
-In this package we choose a better way to solve this problem. We release different `npm packages` for different platform. And add it to `optionalDependencies` before release the `Major` package to npm.
-
-`NPM` will choose which native package should download from `registry` automatically. You can see [npm](./npm) dir for details. And you can also run `yarn add @zkud/simd-arrays-functions` to see how it works.
-
-## Develop requirements
-
-- Install latest `Rust`
-- Install `Node.js@10+` which fully supported `Node-API`
-- Install `yarn@1.x`
-
-## Test in local
-
-- yarn
-- yarn build
-- yarn test
-
-And you will see:
-
-```bash
-$ ava --verbose
-
-  ✔ sync function from native code
-  ✔ sleep function from native code (201ms)
-  ─
-
-  2 tests passed
-✨  Done in 1.12s.
+```sh
+$ npm install @zkud/simd-arrays-functions
 ```
 
-## Release package
+Or you can install the project with yarn. In the project directory, run:
 
-Ensure you have set you **NPM_TOKEN** in `Github` project setting.
-
-In `Settings -> Secrets`, add **NPM_TOKEN** into it.
-
-When you want release package:
-
-```
-yarn version [xxx]
-
-git push --follow-tags
+```sh
+$ yarn add @zkud/simd-arrays-functions
 ```
 
-Github actions will do the rest job for you.
+## Using @zkud/simd-arrays-functions
+
+First we need to create typed arrays,
+Regarding supported types please check [this documentation](123).
+```
+  const array1 = new Float64Array([1, 2, 3]);
+  const array2 = new Float64Array([1, 2, 3]);
+  const resultArray = new Float64Array(3);
+```
+
+Then we could use some operations, you could check the full list [here](123).
+```
+  const { add, mul } = require('@zkud/simd-arrays-functions');
+
+  add(array1, array2, resultArray);
+  mul(array1, resultArray, resultArray);
+```
+
+And then we need to extract result values, the **.values()** method of typed arrays could be used:
+```
+  for(const value of resultArray.values) {
+    console.log(value);
+  }
+```
