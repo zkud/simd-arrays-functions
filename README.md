@@ -29,15 +29,13 @@ Both TypeScript and JavaScript are supported.
 
 ## Installing @zkud/simd-arrays-functions
 
-Installing SIMD requires a [supported version of Node and Rust](https://github.com/neon-bindings/neon#platform-support) and [vulkan API installed](https://www.vulkan.org/).
-
-You can install the project with npm. In the project directory, run:
+You can install the package with npm. In the project directory, run:
 
 ```sh
 $ npm install @zkud/simd-arrays-functions
 ```
 
-Or you can install the project with yarn. In the project directory, run:
+Or you can install the package with yarn. In the project directory, run:
 
 ```sh
 $ yarn add @zkud/simd-arrays-functions
