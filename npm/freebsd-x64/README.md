@@ -1,3 +1,3 @@
-# `@napi-rs/package-template-freebsd-x64`
+# `@zkud/simd-arrays-functions-freebsd-x64`
 
-This is the **x86_64-unknown-freebsd** binary for `@napi-rs/package-template`
+This is the **x86_64-unknown-freebsd** binary for `@zkud/simd-arrays-functions`

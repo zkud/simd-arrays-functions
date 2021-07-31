@@ -1,14 +1,14 @@
 {
-  "name": "@napi-rs/package-template",
+  "name": "@zkud/simd-arrays-functions",
   "version": "1.0.0",
-  "description": "Template project for writing node package with napi-rs",
+  "description": "npm package for Node.js-like envs with simd functions for typed arrays implemented with Rust and Vulcano",
   "main": "index.js",
-  "repository": "git@github.com:napi-rs/package-template.git",
+  "repository": "https://github.com/zkud/simd-arrays-functions",
   "license": "MIT",
-  "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
+  "keywords": ["simd", "vulkano", "napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
   "files": ["index.d.ts", "index.js"],
   "napi": {
-    "name": "package-template",
+    "name": "simd-arrays-functions",
     "triples": {
       "defaults": true,
       "additional": [
@@ -91,17 +91,17 @@
     "parser": "typescript"
   },
   "optionalDependencies": {
-    "@napi-rs/package-template-win32-x64-msvc": "^1.0.0",
-    "@napi-rs/package-template-darwin-x64": "^1.0.0",
-    "@napi-rs/package-template-linux-x64-gnu": "^1.0.0",
-    "@napi-rs/package-template-linux-x64-musl": "^1.0.0",
-    "@napi-rs/package-template-linux-arm64-gnu": "^1.0.0",
-    "@napi-rs/package-template-win32-ia32-msvc": "^1.0.0",
-    "@napi-rs/package-template-linux-arm-gnueabihf": "^1.0.0",
-    "@napi-rs/package-template-darwin-arm64": "^1.0.0",
-    "@napi-rs/package-template-android-arm64": "^1.0.0",
-    "@napi-rs/package-template-freebsd-x64": "^1.0.0",
-    "@napi-rs/package-template-linux-arm64-musl": "^1.0.0",
-    "@napi-rs/package-template-win32-arm64-msvc": "^1.0.0"
+    "@zkud/simd-arrays-functions-win32-x64-msvc": "^1.0.0",
+    "@zkud/simd-arrays-functions-darwin-x64": "^1.0.0",
+    "@zkud/simd-arrays-functions-linux-x64-gnu": "^1.0.0",
+    "@zkud/simd-arrays-functions-linux-x64-musl": "^1.0.0",
+    "@zkud/simd-arrays-functions-linux-arm64-gnu": "^1.0.0",
+    "@zkud/simd-arrays-functions-win32-ia32-msvc": "^1.0.0",
+    "@zkud/simd-arrays-functions-linux-arm-gnueabihf": "^1.0.0",
+    "@zkud/simd-arrays-functions-darwin-arm64": "^1.0.0",
+    "@zkud/simd-arrays-functions-android-arm64": "^1.0.0",
+    "@zkud/simd-arrays-functions-freebsd-x64": "^1.0.0",
+    "@zkud/simd-arrays-functions-linux-arm64-musl": "^1.0.0",
+    "@zkud/simd-arrays-functions-win32-arm64-msvc": "^1.0.0"
   }
 }

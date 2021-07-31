@@ -1,10 +1,10 @@
 {
-  "name": "@napi-rs/package-template-linux-arm-gnueabihf",
+  "name": "@zkud/simd-arrays-functions-linux-arm-gnueabihf",
   "version": "1.0.0",
   "os": ["linux"],
   "cpu": ["arm"],
-  "main": "package-template.linux-arm-gnueabihf.node",
-  "files": ["package-template.linux-arm-gnueabihf.node"],
+  "main": "simd-arrays-functions.linux-arm-gnueabihf.node",
+  "files": ["simd-arrays-functions.linux-arm-gnueabihf.node"],
   "description": "Template project for writing node package with napi-rs",
   "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
   "license": "MIT",
@@ -15,5 +15,5 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@github.com:napi-rs/package-template.git"
+  "repository": "git@github.com:zkud/simd-arrays-functions.git"
 }
